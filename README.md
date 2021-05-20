@@ -1,9 +1,14 @@
 # stadnamn
 Character level self-supervised model to generate Norwegian place names
 
-## Here are some examples of output from the model.
+# Generate Norwegian stadnamn using transformer
 
-|        |          |          |          | Vestr    | Østre
+The goal of this weekend project is to play with the transformer architecture and at the same time get to use some Norwegian language data in the way they are manifested in Norwegian place names, stadnamn. The general idea is to teach the transformer to predict the next character in a place name. I thought it could work like a typical autocomplete, so that it can complete a place name once you seed it with zero, one, two or more letters. The transformer code is from the Keras example [text classification with transformer](https://keras.io/examples/nlp/text_classification_with_transformer/) by [Nandan Apoorv](https://twitter.com/NandanApoorv) and I have adapted it somewhat to this task. The transformer architecture was introduced in the [Attention is all you need](https://arxiv.org/abs/1706.03762) paper first submitted to the Arxiv server in 2017. As a side note, it was submitted on my birthday. I really admire the ingenuity of the transformer architecture and me and my collegue Lubos Steskal had a great session dissecting it on the blackboard. I like how this task combines the old Norwegian place names with the fairly new transformer architecture. The neural network should learn quite a bit about how Norwegian place names are composed and it will be fun to see whether it can come up with new ones that have the look and feel of a Norwegian place name.
+
+## Spoiler Alert: Here are some examples of output from the model.
+The column header shows the seed for that column. If the header contains the empty string "" it means the model must produce the first character in the place name. Note that the model is casing aware.
+
+|   ""   |    ""    |    ""    |    ""    | Vestr    | Østre
 -------- | -------- | -------- | -------- | -------- | --------
 Fortenvika | Storfjellet | Hestberget | Salponøyvågen | Vestre Kjollen | Østren
 Koløya | Gravdådalen | Sørhaugen | Tømmelibrua | Vestrane | Østre Varde
