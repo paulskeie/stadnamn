@@ -1,5 +1,5 @@
 # stadnamn
-Character level self-supervised model to generate Norwegian place names
+Character level self-supervised transformer model to generate Norwegian place names
 
 ## Here are some examples of output from the model.
 
@@ -44,6 +44,6 @@ To try the API there is a consume_azure.py that hits the api n times with a few 
 
 ## Sampling strategy
 
-Currently there are two sampling methods, a standard sampling method the always picks the most probable next character.
+Currently there are two sampling methods, a standard sampling method that always picks the most probable next character.
 This method will have low entropy, little fantasy, and can get stuck in repeatable patterns.
 The other is a temperature sampling method that does multinomial sampling and where you can set the degree of entropy using a temperature parameter. The table with place names at the top was produced setting samplingmethod to temperature and the temperature to 1.0.
